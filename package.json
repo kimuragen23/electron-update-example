@@ -4,18 +4,22 @@
   "description": "",
   "main": "main.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/kimuragen23/electron-update-example.git"
+    "type": "git",
+    "url": "https://github.com/kimuragen23/electron-update-example.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "build:win64": "electron-builder --win --x64"
+    "build": "electron-builder --win --x64 --publish never",
+    "deploy": "electron-builder --win --x64 --publish always"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^12.0.1",
     "electron-builder": "^22.10.5"
+  },
+  "dependencies": {
+    "electron-updater": "^4.0.6"
   }
 }
